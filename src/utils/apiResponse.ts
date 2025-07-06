@@ -1,4 +1,4 @@
-import { Weather } from "../models/weather";
+
 
 export class ApiResponse<T> {
   constructor(

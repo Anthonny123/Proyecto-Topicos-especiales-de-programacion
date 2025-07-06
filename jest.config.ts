@@ -3,23 +3,16 @@ import type { Config } from '@jest/types';
 const config: Config.InitialOptions = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  verbose: true,
-  collectCoverage: true,
-  collectCoverageFrom: [
-    'src/**/*.{ts,js}',
-    '!src/**/*.test.{ts,js}',
-    '!src/**/*.spec.{ts,js}',
-  ],
-  testMatch: ['**/*.test.ts'],
-  moduleFileExtensions: ['ts', 'js', 'json'],
+  moduleFileExtensions: ['ts', 'js'],
   transform: {
-    '^.+\\.ts$': 'ts-jest',
+    '^.+\\.ts$': 'ts-jest'
   },
+  testMatch: ['**/*.test.ts'],
   globals: {
     'ts-jest': {
-      tsconfig: 'tsconfig.json',
-    },
-  },
+      tsconfig: 'tsconfig.json'
+    }
+  }
 };
 
 export default config;
